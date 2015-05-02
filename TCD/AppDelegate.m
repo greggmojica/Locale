@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+
 
 @interface AppDelegate ()
 
@@ -17,7 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self updateAppearance];
+
+    [Parse setApplicationId:@"wWiLQU7JyacM9ynDuh3MpXwaYwiKo4lQb5FlVcqm" clientKey:@"s4mHOMOPGXQBn5XomRbL2EPSkZ2hwgi1nGrqPGZm"];
+    
     return YES;
+    
+    
+}
+
+-(void)updateAppearance {
+    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Avenir Next" size:45] forKey:NSFontAttributeName];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
