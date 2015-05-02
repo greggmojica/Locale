@@ -38,14 +38,16 @@
 {
     [super viewDidLoad];
     
-    UIColor *color = [UIColor colorWithRed:0.302 green:0.38 blue:0.812 alpha:1];
+    [self setNeedsStatusBarAppearanceUpdate];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    [self.navigationController.navigationBar setBarTintColor:color];
+    UIColor *color = [UIColor colorWithRed:0.231 green:0.671 blue:0.82 alpha:1];
     
-    self.navigationController.navigationBar.tintColor = color;
+   [self.navigationController.navigationBar setBarTintColor:color];
+    
+   // self.navigationController.navigationBar.tintColor = color;
     [self.navigationController.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.navigationController.navigationBar.translucent = YES;
     
     
     
@@ -54,6 +56,12 @@
                                                  name:@"refreshTable"
                                                object:nil];
 }
+
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 
 - (void)refreshTable:(NSNotification *) notification
 {

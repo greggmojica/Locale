@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self updateAppearance];
+  //  [self updateAppearance];
 
     [Parse setApplicationId:@"wWiLQU7JyacM9ynDuh3MpXwaYwiKo4lQb5FlVcqm" clientKey:@"s4mHOMOPGXQBn5XomRbL2EPSkZ2hwgi1nGrqPGZm"];
     
