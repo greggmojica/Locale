@@ -16,7 +16,16 @@ class SettingsViewController: UIViewController {
         var vc = StatusObject()
         vc.updateStatus()
         
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+
+        var color = UIColor(red:0.31, green:0.68, blue:0.81, alpha:1.0)
+    
+       // self.navigationController?.navigationBar.tintColor = color
         
+
+        var nav = self.navigationController?.navigationBar
+        // 2
+        nav?.barStyle = UIBarStyle.Black
         
         
         // Do any additional setup after loading the view.

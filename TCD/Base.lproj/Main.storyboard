@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="3Vj-wk-YhE">
             <objects>
                 <viewController id="baf-HG-mla" customClass="SettingsViewController" customModule="TCD" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Aq3-OS-AUe" secondAttribute="trailing" constant="-16" id="boO-fY-bJC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Wgb-ni-HgT">
+                    <navigationItem key="navigationItem" title="Settings" id="Wgb-ni-HgT">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="rgR-xc-WmP">
                             <connections>
                                 <action selector="close:" destination="baf-HG-mla" id="zSI-ea-wOb"/>

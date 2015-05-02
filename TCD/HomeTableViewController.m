@@ -46,8 +46,17 @@
    [self.navigationController.navigationBar setBarTintColor:color];
     
    // self.navigationController.navigationBar.tintColor = color;
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      
+      
+      [UIFont fontWithName:@"Avenir Next" size:21],
+      NSFontAttributeName,
+      
+      
+      [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
     
     
     
@@ -63,9 +72,7 @@
 }
 
 
-- (void)refreshTable:(NSNotification *) notification
-{
-    // Reload the recipes
+- (void)refreshTable:(NSNotification *) notification {
     [self loadObjects];
 }
 
