@@ -102,6 +102,18 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
+    cell.transform = CGAffineTransformMakeScale(0.3, 0.3);
+
+    
+    [UIView animateWithDuration:1.3 delay:0
+         usingSpringWithDamping:0.3 initialSpringVelocity:0.2
+                        options:0 animations:^{
+                            
+                            cell.transform = CGAffineTransformMakeScale(1, 1);
+                            
+                            
+                        } completion:nil];
+    
     
     NSLog(@"The pfokect is %@", object);
     

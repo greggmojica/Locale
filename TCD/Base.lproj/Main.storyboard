@@ -5,6 +5,45 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="3Vj-wk-YhE">
+            <objects>
+                <viewController id="baf-HG-mla" customClass="SettingsViewController" customModule="TCD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wgm-cv-2Lm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gsc-AS-Rei"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RfL-7Y-3MM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Made with care at Disrupt NY, 2015" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aq3-OS-AUe">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aq3-OS-AUe" firstAttribute="leading" secondItem="RfL-7Y-3MM" secondAttribute="leadingMargin" constant="-16" id="GbI-zi-7KS"/>
+                            <constraint firstItem="Aq3-OS-AUe" firstAttribute="top" secondItem="wgm-cv-2Lm" secondAttribute="bottom" id="JLf-c0-Vtl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Aq3-OS-AUe" secondAttribute="bottom" constant="-64" id="RzV-mJ-7aW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aq3-OS-AUe" secondAttribute="trailing" constant="-16" id="boO-fY-bJC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wgb-ni-HgT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="rgR-xc-WmP">
+                            <connections>
+                                <action selector="close:" destination="baf-HG-mla" id="zSI-ea-wOb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQs-Tp-z5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="-257"/>
+        </scene>
         <!--Near Me-->
         <scene sceneID="lVD-BZ-G5x">
             <objects>
@@ -70,12 +109,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Near Me" id="czK-X1-bfg">
                         <barButtonItem key="backBarButtonItem" title="image" id="jMD-gj-58K"/>
-                        <barButtonItem key="leftBarButtonItem" image="navArrow.png" id="Y1m-Jv-738">
+                        <barButtonItem key="leftBarButtonItem" image="settings-100" id="Y1m-Jv-738">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="kO0-6a-PkP" kind="show" id="inr-75-JDM"/>
+                                <segue destination="J2l-lU-tMf" kind="presentation" id="B6u-wX-3aM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="navProfile.png" id="KCE-Zk-65h">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KCE-Zk-65h">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="msl-VQ-bgi" kind="show" id="0vg-vU-nWO"/>
                             </connections>
@@ -103,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yub-Bc-bE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="-165"/>
+            <point key="canvasLocation" x="1994" y="-165"/>
         </scene>
         <!--Home Detail View Controller-->
         <scene sceneID="ICD-iE-4E4">
@@ -128,15 +169,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCh-Ro-KMl">
-                                <rect key="frame" x="128" y="215" width="345" height="256"/>
+                                <rect key="frame" x="128" y="208" width="345" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="345" id="emT-nf-VB5"/>
-                                    <constraint firstAttribute="height" constant="256" id="t1N-gw-pXi"/>
+                                    <constraint firstAttribute="height" constant="270" id="t1N-gw-pXi"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -153,7 +194,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eIa-Q6-SO3">
-                        <barButtonItem key="rightBarButtonItem" title="Going?" id="Gwi-Br-CrJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Going?" id="Gwi-Br-CrJ">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textField" destination="RCh-Ro-KMl" id="Zrk-CI-fj1"/>
@@ -182,9 +225,26 @@
             </objects>
             <point key="canvasLocation" x="-411" y="567"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sPx-fy-SQd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2l-lU-tMf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQK-8u-psz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="baf-HG-mla" kind="relationship" relationship="rootViewController" id="XlC-9I-zzf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mW6-XI-SCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213" y="-257"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="navArrow.png" width="50" height="50"/>
-        <image name="navProfile.png" width="50" height="50"/>
+        <image name="settings-100" width="24" height="24"/>
     </resources>
 </document>
