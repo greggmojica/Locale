@@ -37,6 +37,8 @@
                       
                       nil];
     
+    
+    
                       
 
     
@@ -47,7 +49,7 @@
     self.tableView.dataSource=self;
     
     
-    CLLocationCoordinate2D coors = CLLocationCoordinate2DMake(40.712784,-74.0059410);
+    CLLocationCoordinate2D coors = CLLocationCoordinate2DMake([[self.object objectForKey:@"Location"]latitude ],[[self.object objectForKey:@"Location"]longitude ]);
     MKCoordinateSpan span = MKCoordinateSpanMake(0.03, 0.04 );
     MKCoordinateRegion region = MKCoordinateRegionMake(coors, span);
     

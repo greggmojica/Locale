@@ -39,6 +39,9 @@
 		575D19E21AF5C40B00EA5247 /* NewRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D19E11AF5C40B00EA5247 /* NewRecipeViewController.m */; };
 		575D19E41AF5C42D00EA5247 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575D19E31AF5C42D00EA5247 /* Social.framework */; };
 		575D19E61AF5C43800EA5247 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575D19E51AF5C43800EA5247 /* Accounts.framework */; };
+		575D19E91AF5D28700EA5247 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D19E81AF5D28700EA5247 /* WebViewController.m */; };
+		575D1A061AF6509700EA5247 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D1A021AF6509700EA5247 /* LoginViewController.m */; };
+		575D1A071AF6509700EA5247 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D1A031AF6509700EA5247 /* SignupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,12 @@
 		575D19E11AF5C40B00EA5247 /* NewRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRecipeViewController.m; sourceTree = "<group>"; };
 		575D19E31AF5C42D00EA5247 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		575D19E51AF5C43800EA5247 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		575D19E71AF5D28700EA5247 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		575D19E81AF5D28700EA5247 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		575D1A021AF6509700EA5247 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../../LoginViewController.m; sourceTree = "<group>"; };
+		575D1A031AF6509700EA5247 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupViewController.m; path = ../../SignupViewController.m; sourceTree = "<group>"; };
+		575D1A041AF6509700EA5247 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupViewController.h; path = ../../SignupViewController.h; sourceTree = "<group>"; };
+		575D1A051AF6509700EA5247 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../../LoginViewController.h; sourceTree = "<group>"; };
 		C697D0A0F73CBE7F05396030 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E6281D7AB15008CB70B569D1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,21 +205,16 @@
 		575D19881AF5400E00EA5247 /* TCD */ = {
 			isa = PBXGroup;
 			children = (
+				575D1A0D1AF6554700EA5247 /* New Event */,
+				575D1A0C1AF6553E00EA5247 /* Objects */,
+				575D1A0B1AF6553200EA5247 /* Home View */,
+				575D1A0A1AF6552800EA5247 /* Settings */,
+				575D1A091AF6551100EA5247 /* App Delegate */,
+				575D1A081AF654FF00EA5247 /* User Creation */,
 				575D19931AF5400E00EA5247 /* Main.storyboard */,
-				575D19E01AF5C40B00EA5247 /* NewRecipeViewController.h */,
-				575D19E11AF5C40B00EA5247 /* NewRecipeViewController.m */,
-				575D198D1AF5400E00EA5247 /* AppDelegate.h */,
-				575D198E1AF5400E00EA5247 /* AppDelegate.m */,
-				575D19901AF5400E00EA5247 /* ViewController.h */,
-				575D19911AF5400E00EA5247 /* ViewController.m */,
-				575D19D41AF58BFB00EA5247 /* SettingsViewController.swift */,
-				575D19C71AF541C900EA5247 /* HomeTableViewController.h */,
-				575D19C81AF541C900EA5247 /* HomeTableViewController.m */,
-				575D19D61AF58C7800EA5247 /* StatusObject.h */,
-				575D19D71AF58C7800EA5247 /* StatusObject.m */,
-				575D19CE1AF551FD00EA5247 /* HomeDetailViewController.h */,
-				575D19CF1AF551FD00EA5247 /* HomeDetailViewController.m */,
 				575D19961AF5400E00EA5247 /* Images.xcassets */,
+				575D19E71AF5D28700EA5247 /* WebViewController.h */,
+				575D19E81AF5D28700EA5247 /* WebViewController.m */,
 				575D19981AF5400E00EA5247 /* LaunchScreen.xib */,
 				575D19891AF5400E00EA5247 /* Supporting Files */,
 				575D19D31AF58BFA00EA5247 /* TCD-Bridging-Header.h */,
@@ -242,6 +246,65 @@
 				575D19A41AF5400E00EA5247 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		575D1A081AF654FF00EA5247 /* User Creation */ = {
+			isa = PBXGroup;
+			children = (
+				575D1A021AF6509700EA5247 /* LoginViewController.m */,
+				575D1A031AF6509700EA5247 /* SignupViewController.m */,
+				575D1A041AF6509700EA5247 /* SignupViewController.h */,
+				575D1A051AF6509700EA5247 /* LoginViewController.h */,
+			);
+			name = "User Creation";
+			sourceTree = "<group>";
+		};
+		575D1A091AF6551100EA5247 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				575D198D1AF5400E00EA5247 /* AppDelegate.h */,
+				575D198E1AF5400E00EA5247 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		575D1A0A1AF6552800EA5247 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				575D19D41AF58BFB00EA5247 /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		575D1A0B1AF6553200EA5247 /* Home View */ = {
+			isa = PBXGroup;
+			children = (
+				575D19C71AF541C900EA5247 /* HomeTableViewController.h */,
+				575D19C81AF541C900EA5247 /* HomeTableViewController.m */,
+				575D19CE1AF551FD00EA5247 /* HomeDetailViewController.h */,
+				575D19CF1AF551FD00EA5247 /* HomeDetailViewController.m */,
+			);
+			name = "Home View";
+			sourceTree = "<group>";
+		};
+		575D1A0C1AF6553E00EA5247 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				575D19901AF5400E00EA5247 /* ViewController.h */,
+				575D19911AF5400E00EA5247 /* ViewController.m */,
+				575D19D61AF58C7800EA5247 /* StatusObject.h */,
+				575D19D71AF58C7800EA5247 /* StatusObject.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		575D1A0D1AF6554700EA5247 /* New Event */ = {
+			isa = PBXGroup;
+			children = (
+				575D19E01AF5C40B00EA5247 /* NewRecipeViewController.h */,
+				575D19E11AF5C40B00EA5247 /* NewRecipeViewController.m */,
+			);
+			name = "New Event";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +451,9 @@
 				575D19921AF5400E00EA5247 /* ViewController.m in Sources */,
 				575D19D81AF58C7800EA5247 /* StatusObject.m in Sources */,
 				575D198F1AF5400E00EA5247 /* AppDelegate.m in Sources */,
+				575D1A071AF6509700EA5247 /* SignupViewController.m in Sources */,
+				575D1A061AF6509700EA5247 /* LoginViewController.m in Sources */,
+				575D19E91AF5D28700EA5247 /* WebViewController.m in Sources */,
 				575D19D01AF551FD00EA5247 /* HomeDetailViewController.m in Sources */,
 				575D198C1AF5400E00EA5247 /* main.m in Sources */,
 				575D19E21AF5C40B00EA5247 /* NewRecipeViewController.m in Sources */,

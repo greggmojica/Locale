@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    @IBOutlet var slider: UISlider!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,9 @@ class SettingsViewController: UIViewController {
 
         var color = UIColor(red:0.31, green:0.68, blue:0.81, alpha:1.0)
     
+        NSUserDefaults.standardUserDefaults().floatForKey("sliderValue")
+    
+        
        // self.navigationController?.navigationBar.tintColor = color
         
 
@@ -40,6 +44,12 @@ class SettingsViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func save(sender: AnyObject) {
+        NSUserDefaults.standardUserDefaults().setFloat(self.slider.value, forKey: "sliderValue")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
+        
+    }
     /*
     // MARK: - Navigation
 

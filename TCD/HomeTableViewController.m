@@ -38,6 +38,12 @@
 {
     [super viewDidLoad];
     
+    if ([PFUser currentUser]) {
+        
+    } else {
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }
+    
     [self setNeedsStatusBarAppearanceUpdate];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -100,6 +106,12 @@
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
      }*/
     
+    PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude:40.7232420
+                                                      longitude:-74.0064270];
+    
+    float f =  [[NSUserDefaults standardUserDefaults]floatForKey:@"sliderValue"];
+
+    [query whereKey:@"Location" nearGeoPoint:userGeoPoint withinMiles:f];
     [query orderByDescending:@"createdAt"];
     
     return query;
