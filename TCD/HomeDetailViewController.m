@@ -189,6 +189,8 @@
         //  NSString *savedEventId = event.eventIdentifier;  //this is so you can access this event later
     }];
 
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Successfully Added to Your Calendar!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 
